@@ -16,7 +16,7 @@
     Private Sub InitThemes()
         themes.Add(New Theme("Default", Brushes.White, 14, 0.8))
         unlockedThemes.Add("Default")
-        selectedTheme = "Crazy"
+        selectedTheme = "Default"
 
         themes.Add(New Theme("Penta", Brushes.White, 5, 0))
         themes.Add(New Theme("Hexa", Brushes.White, 6, 0))

@@ -45,4 +45,15 @@
         End Select
         Return 10
     End Function
+
+    Public Sub PlayDeathSound()
+        Dim fileName As String = "bangLarge"
+        Select Case Size
+            Case 32
+                fileName = "bangMedium"
+            Case 16
+                fileName = "bangSmall"
+        End Select
+        AudioSystem.GetInstance().AddRequest(New AudioRequest(Assets.GetAudioFilePath(fileName), True))
+    End Sub
 End Class

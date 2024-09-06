@@ -82,6 +82,7 @@
                     PointManager.GetInstance().AddPoints(asteroid.GetScore() / 10)
                     bullet.X = -100
                     asteroid.ShouldRemove = True
+                    asteroid.PlayDeathSound()
                     newAsteroids = SplitExistingAsteroid(asteroid)
                 End If
             Next

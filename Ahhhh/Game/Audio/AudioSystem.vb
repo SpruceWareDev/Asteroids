@@ -24,6 +24,7 @@ Public Class AudioSystem
 
     Public Sub StopAudioThread()
         player.controls.stop()
+        player.close()
         audioThread.Abort()
     End Sub
 
@@ -34,7 +35,7 @@ Public Class AudioSystem
                 player.URL = request.GetPath()
                 player.settings.volume = 20
                 player.controls.play()
-                playing = request.MustFinish()
+                playing = True
             End If
         End While
     End Sub
